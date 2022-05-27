@@ -54,6 +54,8 @@ public class Escritorio extends javax.swing.JFrame {
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
         jMenu8 = new javax.swing.JMenu();
 
         jMenu1.setText("jMenu1");
@@ -164,6 +166,23 @@ public class Escritorio extends javax.swing.JFrame {
         jMenu7.setText("Formularios");
         jMenu7.setToolTipText("");
         jMenu7.setActionCommand("Formularios");
+
+        jMenuItem7.setText("JFRAME");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
+        jMenu7.add(jMenuItem7);
+
+        jMenuItem8.setText("JFRAMEINTERNAL");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jMenu7.add(jMenuItem8);
+
         jMenuBar1.add(jMenu7);
 
         jMenu8.setText("Salir");
@@ -221,6 +240,18 @@ public class Escritorio extends javax.swing.JFrame {
     private void jMenu8MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu8MenuSelected
     System.exit(0);
     }//GEN-LAST:event_jMenu8MenuSelected
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        Form1 F1 = new Form1();
+        F1.setVisible(true);
+        
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        Form2 F2 = new Form2();
+        fondo.add(F2);
+        F2.show();
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -283,6 +314,8 @@ public class Escritorio extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     // End of variables declaration//GEN-END:variables
 }
