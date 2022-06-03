@@ -73,9 +73,10 @@ public class Inicio extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
             this.setVisible(false);
             Gestor G = new Gestor();
-            G.setLocationRelativeTo(null);
+            
             G.setSize(1024,683);
             G.setVisible(true);
+            G.setLocationRelativeTo(null);
             //G.setExtendedState(MAXIMIZED_BOTH);
             
     }//GEN-LAST:event_jButton1ActionPerformed

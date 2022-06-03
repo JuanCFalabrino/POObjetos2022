@@ -5,6 +5,9 @@
  */
 package Gestor;
 
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author pc
@@ -12,6 +15,16 @@ package Gestor;
 public class Venta extends javax.swing.JInternalFrame {
      
     enum tamaños{ ninguno,cuarto_kilo,medio_kilo,un_kilo};
+     enum sabores { ninguno,
+                 chocolate, 
+                 granizado, 
+                    banana, 
+                  vainilla, 
+                     limón, 
+                  frutilla, 
+           cremaAmericana};
+    
+    
     
     tamaños tamaños_seleccionado;
     
@@ -36,8 +49,8 @@ public class Venta extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        nombrecliente = new javax.swing.JTextField();
+        mailcliente = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         Productos = new javax.swing.JPanel();
@@ -77,11 +90,11 @@ public class Venta extends javax.swing.JInternalFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1))
+                        .addComponent(nombrecliente))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)))
+                        .addComponent(mailcliente, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -90,11 +103,11 @@ public class Venta extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nombrecliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(mailcliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(50, Short.MAX_VALUE))
         );
 
@@ -256,6 +269,11 @@ public class Venta extends javax.swing.JInternalFrame {
         jButton1.setText("Nuevo");
 
         jButton2.setText("Generar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Salir");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -277,7 +295,7 @@ public class Venta extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton4)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
@@ -294,27 +312,27 @@ public class Venta extends javax.swing.JInternalFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(45, Short.MAX_VALUE))))))
+                                .addContainerGap(20, Short.MAX_VALUE))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton4)
-                        .addGap(47, 47, 47)))
+                        .addGap(15, 15, 15)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(jButton4)))
+                .addGap(5, 5, 5)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Productos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(jButton3)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -322,7 +340,7 @@ public class Venta extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+       this.show(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
@@ -345,7 +363,7 @@ public class Venta extends javax.swing.JInternalFrame {
        Saborespote = 2; 
        tamaños_seleccionado = tamaños.cuarto_kilo;
        System.out.println(Saborespote);
-       
+       JOptionPane.showMessageDialog(null,"Recuerde que con 1/4 kg puede elegir dos sabores","HELADO OSCURO",JOptionPane.INFORMATION_MESSAGE);
        
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
@@ -356,6 +374,7 @@ public class Venta extends javax.swing.JInternalFrame {
        Saborespote = 3; 
        tamaños_seleccionado = tamaños.medio_kilo;
        System.out.println(Saborespote);
+       JOptionPane.showMessageDialog(null,"Recuerde que con 1/2 kg puede elegir 3 sabores","HELADO OSCURO",JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
@@ -364,7 +383,8 @@ public class Venta extends javax.swing.JInternalFrame {
        jRadioButton2.setSelected(false);
        Saborespote = 4; 
        tamaños_seleccionado = tamaños.un_kilo;
-       System.out.println(Saborespote);
+       JOptionPane.showMessageDialog(null,"Recuerde que con 1 kg puede elegir 4 sabores","HELADO OSCURO",JOptionPane.INFORMATION_MESSAGE);
+       
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
@@ -378,7 +398,7 @@ public class Venta extends javax.swing.JInternalFrame {
          jCheckBox6.setEnabled(false);
          jCheckBox7.setEnabled(false);  
         }
-       System.out.println(SaboresContar);
+   
      
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
@@ -395,7 +415,7 @@ public class Venta extends javax.swing.JInternalFrame {
          
         }
         
-         System.out.println(SaboresContar);
+        
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
@@ -409,7 +429,7 @@ public class Venta extends javax.swing.JInternalFrame {
          jCheckBox6.setEnabled(false);
          jCheckBox7.setEnabled(false);  
         }
-         System.out.println(SaboresContar);
+         
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
@@ -423,7 +443,7 @@ public class Venta extends javax.swing.JInternalFrame {
          jCheckBox6.setEnabled(false);
          jCheckBox7.setEnabled(false);  
         }
-         System.out.println(SaboresContar);
+         
     }//GEN-LAST:event_jCheckBox4ActionPerformed
 
     private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
@@ -436,7 +456,7 @@ public class Venta extends javax.swing.JInternalFrame {
          jCheckBox6.setEnabled(false);
          jCheckBox7.setEnabled(false);  
         }
-         System.out.println(SaboresContar);
+        
     }//GEN-LAST:event_jCheckBox5ActionPerformed
 
     private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
@@ -449,8 +469,61 @@ public class Venta extends javax.swing.JInternalFrame {
          jCheckBox1.setEnabled(false);
          jCheckBox7.setEnabled(false);  
         }
-         System.out.println(SaboresContar);
+        
     }//GEN-LAST:event_jCheckBox6ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        String sabores="";
+        String producto="";
+        ImageIcon pedido = new ImageIcon("src/Imagenes/supedido.png");
+        
+        if (jCheckBox1.isSelected()){
+           sabores += jCheckBox1.getText();
+        }
+        if (jCheckBox2.isSelected()){
+           sabores += jCheckBox2.getText() + "," ;
+        }
+        if (jCheckBox3.isSelected()){
+           sabores += jCheckBox3.getText() + ",";
+        }
+        if (jCheckBox4.isSelected()){
+           sabores += jCheckBox4.getText() + ",";
+        }
+        if (jCheckBox5.isSelected()){
+           sabores += jCheckBox5.getText() + ",";
+        }
+        if (jCheckBox6.isSelected()){
+           sabores += jCheckBox6.getText() + ",";
+        }
+        if (jCheckBox7.isSelected()){
+           sabores += jCheckBox7.getText() + ",";
+        }
+        
+        switch (tamaños_seleccionado)
+        {
+            case ninguno: producto="nunguno"; break;
+            case cuarto_kilo: producto="Pote 1/4 Kilo"; break;
+            case medio_kilo:  producto="Pote 1/2 Kilo"; break;
+            case un_kilo:     producto="Pote 1 Kilo"; break;
+        }
+        
+        JOptionPane.showMessageDialog(null, "\n Sr/Sra:" + nombrecliente.getText()+
+                                            "\n Correo Electronico :" + mailcliente.getText()+
+                                            "\n Su producto es : " + producto +
+                                            "\n Sus sabores seleccionado son :" + sabores +
+                                            "\n\n Gracias por su Visita" , "Ticket Helado Oscuro" , JOptionPane.INFORMATION_MESSAGE,pedido);
+        
+                
+                
+                
+                
+                
+                
+                );
+        
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -475,7 +548,7 @@ public class Venta extends javax.swing.JInternalFrame {
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField mailcliente;
+    private javax.swing.JTextField nombrecliente;
     // End of variables declaration//GEN-END:variables
 }
