@@ -70,7 +70,7 @@ public class Venta extends javax.swing.JInternalFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        delivery = new javax.swing.JButton();
 
         setTitle("Ventas - HELADO OSCURO");
 
@@ -282,9 +282,15 @@ public class Venta extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ag2bz3qN_400x400.jpg"))); // NOI18N
-        jButton4.setText("Delivery");
-        jButton4.setToolTipText("");
+        delivery.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ag2bz3qN_400x400.jpg"))); // NOI18N
+        delivery.setText("Delivery");
+        delivery.setToolTipText("");
+        delivery.setEnabled(false);
+        delivery.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deliveryActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -296,7 +302,7 @@ public class Venta extends javax.swing.JInternalFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton4)
+                        .addComponent(delivery)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(Productos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -323,7 +329,7 @@ public class Venta extends javax.swing.JInternalFrame {
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(48, 48, 48)
-                        .addComponent(jButton4)))
+                        .addComponent(delivery)))
                 .addGap(5, 5, 5)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -364,7 +370,7 @@ public class Venta extends javax.swing.JInternalFrame {
        tamaños_seleccionado = tamaños.cuarto_kilo;
        System.out.println(Saborespote);
        JOptionPane.showMessageDialog(null,"Recuerde que con 1/4 kg puede elegir dos sabores","HELADO OSCURO",JOptionPane.INFORMATION_MESSAGE);
-       
+       delivery.setEnabled(true);
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
@@ -375,6 +381,7 @@ public class Venta extends javax.swing.JInternalFrame {
        tamaños_seleccionado = tamaños.medio_kilo;
        System.out.println(Saborespote);
        JOptionPane.showMessageDialog(null,"Recuerde que con 1/2 kg puede elegir 3 sabores","HELADO OSCURO",JOptionPane.INFORMATION_MESSAGE);
+       delivery.setEnabled(true);
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
@@ -384,7 +391,7 @@ public class Venta extends javax.swing.JInternalFrame {
        Saborespote = 4; 
        tamaños_seleccionado = tamaños.un_kilo;
        JOptionPane.showMessageDialog(null,"Recuerde que con 1 kg puede elegir 4 sabores","HELADO OSCURO",JOptionPane.INFORMATION_MESSAGE);
-       
+       delivery.setEnabled(true);
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
@@ -478,7 +485,7 @@ public class Venta extends javax.swing.JInternalFrame {
         ImageIcon pedido = new ImageIcon("src/Imagenes/supedido.png");
         
         if (jCheckBox1.isSelected()){
-           sabores += jCheckBox1.getText();
+           sabores += jCheckBox1.getText() + "," ;
         }
         if (jCheckBox2.isSelected()){
            sabores += jCheckBox2.getText() + "," ;
@@ -515,23 +522,23 @@ public class Venta extends javax.swing.JInternalFrame {
         
                 
                 
-                
-                
-                
-                
-                );
-        
-        
+                       
         
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void deliveryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deliveryActionPerformed
+        Delivery envios = new Delivery();
+        envios.setVisible(true);
+        
+    }//GEN-LAST:event_deliveryActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Productos;
+    private javax.swing.JButton delivery;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
