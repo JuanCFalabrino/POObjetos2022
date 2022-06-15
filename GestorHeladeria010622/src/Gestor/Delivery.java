@@ -511,7 +511,7 @@ public class Delivery extends javax.swing.JFrame {
                 .addGap(25, 25, 25))
         );
 
-        jLabel29.setText("Imagen");
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imaj.jpg"))); // NOI18N
 
         jLabel30.setText("Nombre");
 
@@ -528,6 +528,11 @@ public class Delivery extends javax.swing.JFrame {
         dtele.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dteleActionPerformed(evt);
+            }
+        });
+        dtele.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                dteleKeyTyped(evt);
             }
         });
 
@@ -552,10 +557,10 @@ public class Delivery extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
+                        .addGap(124, 124, 124)
                         .addComponent(jLabel29))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
+                        .addGap(25, 25, 25)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel31)
                             .addComponent(jLabel30)
@@ -570,12 +575,12 @@ public class Delivery extends javax.swing.JFrame {
                                 .addGap(39, 39, 39)
                                 .addComponent(jButton10))
                             .addComponent(dnom)
-                            .addComponent(dcoment, javax.swing.GroupLayout.DEFAULT_SIZE, 261, Short.MAX_VALUE)
+                            .addComponent(dcoment)
                             .addComponent(dentre)
                             .addComponent(dloca)
                             .addComponent(ddirec)
-                            .addComponent(dtele))))
-                .addContainerGap(39, Short.MAX_VALUE))
+                            .addComponent(dtele, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(36, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -590,9 +595,9 @@ public class Delivery extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addContainerGap()
                 .addComponent(jLabel29)
-                .addGap(45, 45, 45)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -617,11 +622,11 @@ public class Delivery extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel35)
                     .addComponent(dcoment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton9)
                     .addComponent(jButton10))
-                .addGap(37, 37, 37))
+                .addContainerGap())
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -652,19 +657,17 @@ public class Delivery extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 71, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 245, Short.MAX_VALUE)
+                    .addGap(0, 219, Short.MAX_VALUE)
                     .addComponent(jInternalFrame1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 246, Short.MAX_VALUE)))
+                    .addGap(0, 218, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 219, Short.MAX_VALUE)
                     .addComponent(jInternalFrame2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 218, Short.MAX_VALUE)))
         );
 
         pack();
@@ -678,43 +681,45 @@ public class Delivery extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton10ActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        archivo archi = new archivo();
+        archi.crearArchivo();
+
+        String nombre = dnom.getText();
+        String telefono = dtele.getText();
+        String direccion = ddirec.getText();
+        String localidad = dloca.getText();
+        String entre = dentre.getText() ;
+        String comentario = dcoment.getText();
+
+        Persona persona = new Persona (nombre,telefono,direccion,localidad,entre,comentario);
+        archi.escribirEnarchivo(persona);
+
+        this.setVisible(false);
+
+    }//GEN-LAST:event_jButton9ActionPerformed
 
     private void dteleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dteleActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_dteleActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-           archivo archi = new archivo();
-           archi.crearArchivo();
-           
-            String nombre = dnom.getText();
-            String telefono = dtele.getText();
-            String direccion = ddirec.getText();
-            String localidad = dloca.getText();
-            String entre = dentre.getText() ;
-            String comentario = dcoment.getText();
-           
-            Persona persona = new Persona (nombre,telefono,direccion,localidad,entre,comentario);
-            archi.escribirEnarchivo(persona);
-            
-          
-            this.setVisible(false);
-           
-               
-        
-        
-    }//GEN-LAST:event_jButton9ActionPerformed
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        this.setVisible(false);
-    }//GEN-LAST:event_jButton10ActionPerformed
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void dteleKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dteleKeyTyped
+     
+        
+        
+    }//GEN-LAST:event_dteleKeyTyped
 
     /**
      * @param args the command line arguments

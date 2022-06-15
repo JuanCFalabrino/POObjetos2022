@@ -69,6 +69,10 @@ public class Persona {
     public void setDcoment(String dcoment) {
         this.dcoment = dcoment;
     }
+
+    String getDloca() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
  
     
     

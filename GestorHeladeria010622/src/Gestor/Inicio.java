@@ -77,6 +77,7 @@ public class Inicio extends javax.swing.JFrame {
             G.setSize(1024,683);
             G.setVisible(true);
             G.setLocationRelativeTo(null);
+            G.setExtendedState(MAXIMIZED_BOTH);
             //G.setExtendedState(MAXIMIZED_BOTH);
             
     }//GEN-LAST:event_jButton1ActionPerformed

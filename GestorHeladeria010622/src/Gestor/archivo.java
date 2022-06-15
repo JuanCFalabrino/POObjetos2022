@@ -24,7 +24,7 @@ public class archivo {
         try{
             //escribir en el archivo
            FileWriter escritura = new FileWriter(archivo, true);
-           escritura.write(persona.getDnom() + "%" + persona.getDtele() + "%" + persona.getDdirec() + "%"  + persona.getDloca()+ "%" + persona.getDentre() +"%" + persona.getDtele() +"%" + persona.getDcoment() + "\r\n");
+           escritura.write(persona.getDnom() + ";" + persona.getDtele() + ";" + persona.getDdirec() + ";"  + persona.getDloca()+ ";" + persona.getDentre() +";" + persona.getDtele() +";" + persona.getDcoment() + "\r\n");
            escritura.close();
         }catch (IOException e ) {
             System.out.println(e);
