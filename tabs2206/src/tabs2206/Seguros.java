@@ -11,11 +11,12 @@ package tabs2206;
  */
 public class Seguros extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Seguros
-     */
+    String tseguros;
+ 
+
     public Seguros() {
         initComponents();
+      
     }
 
     /**
@@ -27,12 +28,12 @@ public class Seguros extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        Auto = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        DOM = new javax.swing.JTextField();
+        MARCA = new javax.swing.JComboBox<>();
+        MODELO = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -42,12 +43,12 @@ public class Seguros extends javax.swing.JFrame {
         jCheckBox4 = new javax.swing.JCheckBox();
         jCheckBox5 = new javax.swing.JCheckBox();
         jLabel8 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        confranquicia = new javax.swing.JComboBox<>();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        ANO = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
@@ -66,32 +67,62 @@ public class Seguros extends javax.swing.JFrame {
         jCheckBox12 = new javax.swing.JCheckBox();
         jCheckBox13 = new javax.swing.JCheckBox();
         jCheckBox14 = new javax.swing.JCheckBox();
-        jTextField1 = new javax.swing.JTextField();
+        cuilcli = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        nombrecli = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        telcli = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        mailcli = new javax.swing.JTextField();
+        jPanel10 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Seguros CFPN36");
 
-        jLabel5.setText("Dominio ");
-
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+        Auto.setName(""); // NOI18N
+        Auto.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                AutoStateChanged(evt);
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "FORD", "FIAT", "AUDI" }));
-        jComboBox1.setToolTipText("");
+        jPanel1.setName("Seguros Vehiculo"); // NOI18N
+        jPanel1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jPanel1FocusGained(evt);
+            }
+        });
+        jPanel1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jPanel1PropertyChange(evt);
+            }
+        });
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Punto", "500", "Palio", "Fiesta", "Focus", "Ecosport", "A3", "A4", "A5" }));
-        jComboBox2.setToolTipText("");
+        jLabel5.setText("Dominio ");
+
+        DOM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DOMActionPerformed(evt);
+            }
+        });
+
+        MARCA.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "FORD", "FIAT", "AUDI" }));
+        MARCA.setToolTipText("");
+        MARCA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MARCAActionPerformed(evt);
+            }
+        });
+
+        MODELO.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Punto", "500", "Palio", "Fiesta", "Focus", "Ecosport", "A3", "A4", "A5" }));
+        MODELO.setToolTipText("");
+        MODELO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MODELOActionPerformed(evt);
+            }
+        });
 
         jLabel6.setText("Marca");
 
@@ -100,8 +131,10 @@ public class Seguros extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Coberturas"));
 
         jCheckBox1.setText("Terceros Completo");
+        jCheckBox1.setName("Terceros Completo"); // NOI18N
 
         jCheckBox3.setText("Responsabilidad Civil");
+        jCheckBox3.setName("Responsabilidad Civil"); // NOI18N
         jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox3ActionPerformed(evt);
@@ -109,6 +142,7 @@ public class Seguros extends javax.swing.JFrame {
         });
 
         jCheckBox2.setText("Todo Riesgo sin Franquicia");
+        jCheckBox2.setName("Todo Riesgo sin Franquicia"); // NOI18N
         jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox2ActionPerformed(evt);
@@ -116,6 +150,7 @@ public class Seguros extends javax.swing.JFrame {
         });
 
         jCheckBox4.setText("Todo Riesgo con Franquicia");
+        jCheckBox4.setName("Todo Riesgo con Franquicia"); // NOI18N
         jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox4ActionPerformed(evt);
@@ -123,6 +158,7 @@ public class Seguros extends javax.swing.JFrame {
         });
 
         jCheckBox5.setText("Granizo");
+        jCheckBox5.setName("Granizo"); // NOI18N
         jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox5ActionPerformed(evt);
@@ -161,20 +197,26 @@ public class Seguros extends javax.swing.JFrame {
 
         jLabel8.setText("Franquicia");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "20000", "40000", "60000", "80000" }));
-        jComboBox3.setToolTipText("");
+        confranquicia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "20000", "40000", "60000", "80000" }));
+        confranquicia.setToolTipText("");
+        confranquicia.setEnabled(false);
 
         jLabel9.setText("Premio: ");
 
         jLabel10.setText("Prima por mes:");
 
         jButton1.setText("Contratar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel11.setText("Año");
 
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        ANO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                ANOActionPerformed(evt);
             }
         });
 
@@ -197,26 +239,26 @@ public class Seguros extends javax.swing.JFrame {
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                             .addGap(29, 29, 29)
                                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(DOM, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(MARCA, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                             .addGap(27, 27, 27)
-                                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(MODELO, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(jLabel8)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(confranquicia, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addComponent(jLabel9))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel11)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(ANO, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -227,19 +269,19 @@ public class Seguros extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(DOM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(MARCA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(MODELO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel7))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(confranquicia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -250,15 +292,24 @@ public class Seguros extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ANO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Seguros Vehiculo", jPanel1);
+        Auto.addTab("Seguros Vehiculo", jPanel1);
+        jPanel1.getAccessibleContext().setAccessibleName("Seguros Vehiculo");
+        jPanel1.getAccessibleContext().setAccessibleDescription("");
+
+        jPanel3.setName("Seguros Vida"); // NOI18N
 
         jButton3.setText("Contratar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder("Coberturas"));
 
@@ -294,7 +345,7 @@ public class Seguros extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(252, Short.MAX_VALUE)
+                .addContainerGap(263, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3))
@@ -310,7 +361,9 @@ public class Seguros extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Seguros Vida", jPanel3);
+        Auto.addTab("Seguros Vida", jPanel3);
+
+        jPanel4.setName("Seguros Hogar"); // NOI18N
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Coberturas"));
 
@@ -370,6 +423,11 @@ public class Seguros extends javax.swing.JFrame {
         );
 
         ContratarHogar.setText("Contratar");
+        ContratarHogar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ContratarHogarActionPerformed(evt);
+            }
+        });
 
         jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder("Elementos Dañados/Robados"));
 
@@ -451,7 +509,7 @@ public class Seguros extends javax.swing.JFrame {
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(ContratarHogar)))
@@ -473,7 +531,7 @@ public class Seguros extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Seguros Hogar", jPanel4);
+        Auto.addTab("Seguros Hogar", jPanel4);
 
         jLabel1.setText("CUIL/CUIT");
 
@@ -481,9 +539,9 @@ public class Seguros extends javax.swing.JFrame {
 
         jLabel3.setText("Telefono ");
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        telcli.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                telcliActionPerformed(evt);
             }
         });
 
@@ -496,33 +554,51 @@ public class Seguros extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(38, 38, 38))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(30, 30, 30))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane1)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel4))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 273, Short.MAX_VALUE)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel4))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cuilcli, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(mailcli, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 273, Short.MAX_VALUE)
+                                        .addComponent(telcli, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addComponent(nombrecli, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(Auto)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -530,56 +606,56 @@ public class Seguros extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cuilcli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nombrecli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(telcli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mailcli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(Auto, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void telcliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telcliActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_telcliActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void DOMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DOMActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_DOMActionPerformed
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
-        // TODO add your handling code here:
+        confranquicia.setEnabled(rootPaneCheckingEnabled);
     }//GEN-LAST:event_jCheckBox4ActionPerformed
 
     private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox5ActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void ANOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ANOActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_ANOActionPerformed
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
         // TODO add your handling code here:
@@ -608,6 +684,70 @@ public class Seguros extends javax.swing.JFrame {
     private void jCheckBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox14ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox14ActionPerformed
+
+    
+    
+    
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //objeto de archivo
+        archivo archi = new archivo();
+        //crear archivo
+        archi.crearArchivo();
+        //getter campos
+        String cuit = cuilcli.getText();
+        String nombre = nombrecli.getText();
+        String telefono = telcli.getText();
+        String mail = mailcli.getText();
+        String dominio = DOM.getName();
+        String marca = (String) MARCA.getSelectedItem();
+        String modelo = (String) MODELO.getSelectedItem();
+        String confra = (String) confranquicia.getSelectedItem();
+        String ano = ANO.getText();
+        String box1 = jCheckBox1.getText();
+        String box2 = jCheckBox2.getText();
+        String box3 =jCheckBox3.getText();
+        String box4 =jCheckBox4.getText();
+        String box5 =jCheckBox5.getText();
+                      
+        System.out.println(marca);
+        //getter solapa
+        String tseg = jPanel1.getName();
+                
+        Persona persona = new Persona (cuit,nombre,telefono,mail,tseg,dominio,marca,modelo,confra,ano,box1,box2,box3,box4,box5);
+        archi.escribirEnarchivo(persona);
+
+         
+               
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void AutoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_AutoStateChanged
+       
+    }//GEN-LAST:event_AutoStateChanged
+
+    private void jPanel1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPanel1FocusGained
+      
+                                   
+    }//GEN-LAST:event_jPanel1FocusGained
+
+    private void jPanel1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jPanel1PropertyChange
+   
+    }//GEN-LAST:event_jPanel1PropertyChange
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       tseguros = "Seguros de Vida";
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void ContratarHogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContratarHogarActionPerformed
+        tseguros = "Seguros de Hogar";
+    }//GEN-LAST:event_ContratarHogarActionPerformed
+
+    private void MARCAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MARCAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MARCAActionPerformed
+
+    private void MODELOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MODELOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MODELOActionPerformed
 
     /**
      * @param args the command line arguments
@@ -645,7 +785,14 @@ public class Seguros extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField ANO;
+    private javax.swing.JTabbedPane Auto;
     private javax.swing.JButton ContratarHogar;
+    private javax.swing.JTextField DOM;
+    private javax.swing.JComboBox<String> MARCA;
+    private javax.swing.JComboBox<String> MODELO;
+    private javax.swing.JComboBox<String> confranquicia;
+    private javax.swing.JTextField cuilcli;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -663,9 +810,6 @@ public class Seguros extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JCheckBox jCheckBox9;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -678,6 +822,7 @@ public class Seguros extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -686,12 +831,8 @@ public class Seguros extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField mailcli;
+    private javax.swing.JTextField nombrecli;
+    private javax.swing.JTextField telcli;
     // End of variables declaration//GEN-END:variables
 }

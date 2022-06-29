@@ -1,0 +1,13 @@
+545464|;sadasdsad;4646;566456464564
+null;5154515;asad;adsa;adssad
+null;5154515;asad;adsa;adssad
+null;5154515;asad;adsa;adssad
+null;5154515;asad;adsa;adssad
+null;5154515;asad;adsa;adssad
+null;5154515;asad;adsa;adssad
+null;555555;juan;54545;545454
+null;21131;jj;gh;h
+null;222;sada;sada;sadsad
+Seguros Vehiculo;545454;adad;asdas;dsasad
+Seguros Vehiculo;54545;juan;lklk;lklk;null;Punto;FORD;20000;54545;Terceros Completo;Todo Riesgo sin Franquicia;Responsabilidad Civil;Todo Riesgo con Franquicia;Granizo
+Seguros Vehiculo;54545;juan;lklk;lklk;null;Punto;FORD;20000;54545;Terceros Completo;Todo Riesgo sin Franquicia;Responsabilidad Civil;Todo Riesgo con Franquicia;Granizo
