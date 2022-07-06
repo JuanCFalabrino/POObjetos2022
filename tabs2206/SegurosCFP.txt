@@ -11,3 +11,13 @@ null;222;sada;sada;sadsad
 Seguros Vehiculo;545454;adad;asdas;dsasad
 Seguros Vehiculo;54545;juan;lklk;lklk;null;Punto;FORD;20000;54545;Terceros Completo;Todo Riesgo sin Franquicia;Responsabilidad Civil;Todo Riesgo con Franquicia;Granizo
 Seguros Vehiculo;54545;juan;lklk;lklk;null;Punto;FORD;20000;54545;Terceros Completo;Todo Riesgo sin Franquicia;Responsabilidad Civil;Todo Riesgo con Franquicia;Granizo
+Seguros Vehiculo;;;;;null;;;;;Terceros Completo;Todo Riesgo sin Franquicia;Responsabilidad Civil;Todo Riesgo con Franquicia;Granizo
+Seguros Vehiculo;21321;32133123;3233;3333;null;Punto;FORD;20000;5454;Terceros Completo;Todo Riesgo sin Franquicia;Responsabilidad Civil;Todo Riesgo con Franquicia;Granizo
+Seguros Hogar;445;5454;45;545
+Seguros Hogar;445;5454;45;545
+Seguros Hogar;545454;juan;4545545;juan@jsjsjs
+Seguros Hogar;5454;JUAN;54564;5454
+Seguros Vehiculo;5454;JUAN;54564;5454;null;;;;;Terceros Completo;Todo Riesgo sin Franquicia;Responsabilidad Civil;Todo Riesgo con Franquicia;Granizo
+Seguros Vida;2028910163;JUAN;45454545;JUAN@JJJJAA
+Seguros Hogar;2028910163;JUAN;45454545;JUAN@JJJJAA
+Seguros Vehiculo;2028910163;JUAN;45454545;JUAN@JJJJAA;null;;;;;Terceros Completo;Todo Riesgo sin Franquicia;Responsabilidad Civil;Todo Riesgo con Franquicia;Granizo

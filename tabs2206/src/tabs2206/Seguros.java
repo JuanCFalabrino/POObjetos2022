@@ -158,6 +158,7 @@ public class Seguros extends javax.swing.JFrame {
         Auto.addTab("Seguros Vida", jPanel3);
 
         jPanel4.setName("Seguros Hogar"); // NOI18N
+        jPanel4.setRequestFocusEnabled(false);
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Coberturas"));
 
@@ -297,10 +298,11 @@ public class Seguros extends javax.swing.JFrame {
                     .addComponent(jCheckBox13)
                     .addComponent(jCheckBox10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCheckBox11)
-                    .addComponent(jCheckBox14)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jCheckBox14)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
@@ -359,7 +361,7 @@ public class Seguros extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 127, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(ContratarHogar)
                 .addGap(87, 87, 87))
@@ -677,9 +679,9 @@ public class Seguros extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
                     .addComponent(mailcli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(25, 25, 25)
                 .addComponent(Auto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -771,7 +773,28 @@ public class Seguros extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel1PropertyChange
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       tseguros = "Seguros de Vida";
+        //objeto de archivo
+        archivo archi = new archivo();
+        //crear archivo
+        archi.crearArchivo();
+        //getter campos
+        String cuit = cuilcli.getText();
+        String nombre = nombrecli.getText();
+        String telefono = telcli.getText();
+        String mail = mailcli.getText();
+                 
+        String tseg = jPanel3.getName();
+        System.out.println(tseg);
+        
+               
+         Persona persona = new Persona (cuit,nombre,telefono,mail,tseg);
+         archi.escribirEnarchivo(persona);
+       
+       
+       
+       
+       
+       
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void MARCAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MARCAActionPerformed
@@ -799,8 +822,22 @@ public class Seguros extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox9ActionPerformed
 
     private void ContratarHogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContratarHogarActionPerformed
+        //objeto de archivo
+        archivo archi = new archivo();
+        //crear archivo
+        archi.crearArchivo();
+        //getter campos
+        String cuit = cuilcli.getText();
+        String nombre = nombrecli.getText();
+        String telefono = telcli.getText();
+        String mail = mailcli.getText();
+                 
         String tseg = jPanel4.getName();
         System.out.println(tseg);
+        
+               
+         Persona persona = new Persona (cuit,nombre,telefono,mail,tseg);
+         archi.escribirEnarchivo(persona);
 
     }//GEN-LAST:event_ContratarHogarActionPerformed
 

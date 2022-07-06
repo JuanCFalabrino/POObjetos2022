@@ -37,6 +37,22 @@ public class Persona {
         this.box5 = box5;
     }
 
+    public Persona(String cuilcli, String tseg) {
+        this.cuilcli = cuilcli;
+        this.tseg = tseg;
+    }
+
+    public Persona(String cuilcli, String nombrecli, String telcli, String mailcli, String tseg) {
+        this.cuilcli = cuilcli;
+        this.nombrecli = nombrecli;
+        this.telcli = telcli;
+        this.mailcli = mailcli;
+        this.tseg = tseg;
+    }
+
+    
+    
+
     public String getCuilcli() {
         return cuilcli;
     }
