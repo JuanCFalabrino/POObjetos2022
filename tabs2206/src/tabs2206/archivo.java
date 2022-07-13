@@ -41,7 +41,7 @@ public class archivo {
             escribir.write( persona.getTseg() + ";" + persona.getCuilcli() + ";"+ persona.getNombrecli() + ";" + persona.getTelcli() + ";" + persona.getMailcli() + ";" + persona.getDominio() + ";" + persona.getMarca() + ";" + persona.getModelo() + ";" + persona.getConfra() + ";" + persona.getAna() + ";" + persona.getBox1() + ";" + persona.getBox2() + ";" + persona.getBox3() + ";" + persona.getBox4() + ";" + persona.getBox5() +"\r\n");
             break;
             case "Seguros Hogar":      
-            escribir.write( persona.getTseg() + ";" + persona.getCuilcli() + ";"+ persona.getNombrecli() + ";" + persona.getTelcli() + ";" + persona.getMailcli()  + "\r\n");
+            escribir.write( persona.getTseg() + ";" + persona.getCuilcli() + ";"+ persona.getNombrecli() + ";" + persona.getTelcli() + ";" + persona.getMailcli()  + ";" + persona.getIncendio()  +  ";" + persona.getInundacion() + ";" + persona.getRobo() + ";" + persona.getCobertura1() + ";" + persona.getCobertura2()+ ";" + persona.getCobertura3()+ "\r\n");
             break;
             case "Seguros Vida":
             escribir.write( persona.getTseg() + ";" + persona.getCuilcli() + ";"+ persona.getNombrecli() + ";" + persona.getTelcli() + ";" + persona.getMailcli()  +"\r\n");

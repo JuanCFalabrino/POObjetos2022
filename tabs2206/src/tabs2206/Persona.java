@@ -18,6 +18,13 @@ public class Persona {
     String box3;
     String box4;
     String box5;
+    String incendio:
+    String robo;
+    String inundacion;
+    String cobertura1;
+    String cobertura2;
+    String cobertura3;
+    
 
     public Persona(String cuilcli, String nombrecli, String telcli, String mailcli, String tseg, String dominio, String modelo, String marca, String confra, String ana, String box1, String box2, String box3, String box4, String box5) {
         this.cuilcli = cuilcli;
@@ -37,17 +44,52 @@ public class Persona {
         this.box5 = box5;
     }
 
-    public Persona(String cuilcli, String tseg) {
-        this.cuilcli = cuilcli;
-        this.tseg = tseg;
-    }
-
     public Persona(String cuilcli, String nombrecli, String telcli, String mailcli, String tseg) {
         this.cuilcli = cuilcli;
         this.nombrecli = nombrecli;
         this.telcli = telcli;
         this.mailcli = mailcli;
         this.tseg = tseg;
+    }
+
+  
+    
+    public Persona(String cuilcli, String nombrecli, String telcli, String mailcli, String tseg, String incendio, String robo, String inundacion, String cobertura1, String cobertura2, String cobertura3) {
+        this.cuilcli = cuilcli;
+        this.nombrecli = nombrecli;
+        this.telcli = telcli;
+        this.mailcli = mailcli;
+        this.tseg = tseg;
+        this.incendio = incendio;
+        this.robo = robo;
+        this.inundacion = inundacion;
+        this.cobertura1 = cobertura1;
+        this.cobertura2 = cobertura2;
+        this.cobertura3 = cobertura3;
+    }
+
+    public String getIncendio() {
+        return incendio;
+    }
+
+    public String getRobo() {
+        return robo;
+    }
+
+    public String getInundacion() {
+        return inundacion;
+    }
+
+    public String getCobertura1() {
+        return cobertura1;
+    }
+
+    public String getCobertura2() {
+        return cobertura2;
+    }
+
+    public String getCobertura3() {
+        return cobertura3;
     }
 
     

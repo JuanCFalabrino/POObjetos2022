@@ -21,3 +21,11 @@ Seguros Vehiculo;5454;JUAN;54564;5454;null;;;;;Terceros Completo;Todo Riesgo sin
 Seguros Vida;2028910163;JUAN;45454545;JUAN@JJJJAA
 Seguros Hogar;2028910163;JUAN;45454545;JUAN@JJJJAA
 Seguros Vehiculo;2028910163;JUAN;45454545;JUAN@JJJJAA;null;;;;;Terceros Completo;Todo Riesgo sin Franquicia;Responsabilidad Civil;Todo Riesgo con Franquicia;Granizo
+Seguros Hogar;111111;as;asd;sada;Incendio;Inundación;Robo 
+Seguros Hogar;111111;as;asd;sada;Incendio;Inundación;Robo 
+Seguros Hogar;111111;as;asd;sada;Incendio;Inundación;Robo 
+Seguros Hogar;21211;adsad;asdasd;adasdasd;Incendio;Inundación;Robo ;Total;Parcial;Total
+Seguros Hogar;254664646;perez;45454;ytytyty;Incendio;Inundación;Robo ;Parcial;Parcial;Parcial
+Seguros Vehiculo;254664646;perez;45454;ytytyty;null;Fiesta;FORD;;2015;Terceros Completo;Todo Riesgo sin Franquicia;Responsabilidad Civil;Todo Riesgo con Franquicia;Granizo
+Seguros Vida;545454;hghg;gfgfq;jjjkj
+Seguros Vida;545454;hghg;gfgfq;jjjkj
